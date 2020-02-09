@@ -65,7 +65,7 @@ public class RoleController implements Serializable {
 		return a;
 	}
 
-	// 展示表格
+	// 表格查询
 	@ResponseBody
 	@RequestMapping("/{page}/{limit}")
 	public RoleLayResult findAllRole(@PathVariable Integer page,@PathVariable Integer limit,String roleCode) {

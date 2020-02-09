@@ -115,6 +115,8 @@ layui.use(['layer','table','form'], function(){
 		  
 	  });
 	  
+	  
+	  //绑定新增按钮
  	  $('#btn_add').on('click',function(){
 		  $.ajax({
 			  url:'role/goadd',
@@ -136,10 +138,10 @@ layui.use(['layer','table','form'], function(){
 	//绑定查询按钮
 	  $('#role_select').on('click',function(){
 	  	var roleCode = $('#roleCode').val();
-	  	 //通过render方法开始渲染table的数据
+	  	 //将参数传到后台
 	  	 table.reload('demo',{
 	  		 where:{'roleCode':roleCode}
-	  	 	,page:{curr:1}
+	  	 	,page:{curr:1} //重新从第一页开始
 	  	 });
 	  });
 	});
